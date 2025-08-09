@@ -1,88 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batman Slot Game</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #111;
-            color: white;
-        }
-        h1 {
-            color: yellow;
-            margin-top: 20px;
-        }
-        .slot-machine {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        .reel {
-            font-size: 50px;
-            background: black;
-            padding: 20px;
-            margin: 0 5px;
-            border-radius: 10px;
-            border: 3px solid yellow;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        button {
-            font-size: 20px;
-            padding: 10px 20px;
-            background: yellow;
-            color: black;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: orange;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 22px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batman688</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      margin: 20px auto;
+    }
+
+    .highlight {
+      color: yellow;
+      font-size: 24px;
+      margin: 10px 0;
+      text-shadow: 0 0 10px yellow;
+    }
+
+    .button {
+      display: block;
+      width: 200px;
+      margin: 15px auto;
+      padding: 15px;
+      background: linear-gradient(to right, #ff4e50, #f9d423);
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .game-link {
+      display: inline-block;
+      background-color: #111;
+      padding: 10px 20px;
+      margin: 20px auto;
+      font-size: 20px;
+      border-radius: 10px;
+      text-shadow: 0 0 10px lime;
+      box-shadow: 0 0 10px lime;
+      color: lime;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>🎰 Batman Slot (Test Version)</h1>
+  <h1>Batman688</h1>
 
-    <div class="slot-machine">
-        <div class="reel" id="reel1">🍒</div>
-        <div class="reel" id="reel2">🍋</div>
-        <div class="reel" id="reel3">⭐</div>
-    </div>
+  <!-- ✅ Image inserted here -->
+  <video width="320" height="240" autoplay loop muted playsinline>
+  <source src="videos/slot.mp4" type="video/mp4" />
+</video>
 
-    <button id="spinBtn">Spin</button>
-    <p id="result"></p>
+  <p>အမြန်ဆုံးငွေသွင်း 💸 အမြန်ဆုံး ငွေထုတ်လိုက်ပါ!</p>
 
-    <script>
-        const symbols = ["🍒", "🍋", "⭐", "🔔", "🍇", "💎"];
+  <a class="game-link" href="https://m.batman688.net/" target="_blank">🎮 Batman688 Casino</a>
 
-        document.getElementById("spinBtn").addEventListener("click", () => {
-            let reel1 = symbols[Math.floor(Math.random() * symbols.length)];
-            let reel2 = symbols[Math.floor(Math.random() * symbols.length)];
-            let reel3 = symbols[Math.floor(Math.random() * symbols.length)];
-
-            document.getElementById("reel1").textContent = reel1;
-            document.getElementById("reel2").textContent = reel2;
-            document.getElementById("reel3").textContent = reel3;
-
-            if (reel1 === reel2 && reel2 === reel3) {
-                document.getElementById("result").textContent = "🎉 JACKPOT! 🎉";
-            } else if (reel1 === reel2 || reel2 === reel3 || reel1 === reel3) {
-                document.getElementById("result").textContent = "😊 Nice! You matched two!";
-            } else {
-                document.getElementById("result").textContent = "😢 Try again!";
-            }
-        });
-    </script>
+  <a class="button" href="https://t.me/BooBoo1N" target="_blank">📱 Telegram</a>
+  <a class="button" href="viber://chat?number=+959683278672" target="_blank">💬 Viber</a>
 </body>
 </html>
