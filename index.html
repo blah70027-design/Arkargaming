@@ -3,128 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4G INVAT Online Agent</title>
+    <title>Batman Slot Game</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header {
             text-align: center;
-            margin-bottom: 20px;
+            background: #111;
+            color: white;
         }
-        .header h1 {
-            font-size: 24px;
-            margin: 0;
-            color: #0066cc;
+        h1 {
+            color: yellow;
+            margin-top: 20px;
         }
-        .header p {
-            margin: 5px 0 0;
-            font-size: 16px;
-            color: #666;
-        }
-        .status-bar {
+        .slot-machine {
             display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
+            justify-content: center;
+            margin: 30px 0;
         }
-        .divider {
-            height: 1px;
-            background-color: #ddd;
-            margin: 15px 0;
+        .reel {
+            font-size: 50px;
+            background: black;
+            padding: 20px;
+            margin: 0 5px;
+            border-radius: 10px;
+            border: 3px solid yellow;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .promo {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff6600;
-            margin: 20px 0;
-        }
-        .action-text {
-            text-align: center;
+        button {
             font-size: 20px;
-            margin: 15px 0;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
         }
-        .code-box {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-family: monospace;
-            font-size: 18px;
-            margin: 20px 0;
-            word-break: break-all;
+        button:hover {
+            background: orange;
         }
-        .flex-code {
-            text-align: center;
-            font-size: 18px;
-            margin: 15px 0;
-        }
-        .contact {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .contact p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-        .contact .number {
-            font-weight: bold;
-            font-size: 18px;
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>4G INVAT</h1>
-            <p>Online Agent</p>
-        </div>
-        
-        <div class="status-bar">
-            <span>12:16 AM</span>
-            <span>| 946KB/s</span>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div class="promo">
-            WIN UP TO 15000%
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div class="action-text">
-            PLACE YOUR
-        </div>
-        
-        <div class="code-box">
-            3) Etnagruti$3ac8a3ab0d1
-        </div>
-        
-        <div class="flex-code">
-            FlexEdnck5:
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div class="contact">
-            <p>Viber</p>
-            <p class="number">09 683 278 672</p>
-        </div>
+    <h1>🎰 Batman Slot (Test Version)</h1>
+
+    <div class="slot-machine">
+        <div class="reel" id="reel1">🍒</div>
+        <div class="reel" id="reel2">🍋</div>
+        <div class="reel" id="reel3">⭐</div>
     </div>
+
+    <button id="spinBtn">Spin</button>
+    <p id="result"></p>
+
+    <script>
+        const symbols = ["🍒", "🍋", "⭐", "🔔", "🍇", "💎"];
+
+        document.getElementById("spinBtn").addEventListener("click", () => {
+            let reel1 = symbols[Math.floor(Math.random() * symbols.length)];
+            let reel2 = symbols[Math.floor(Math.random() * symbols.length)];
+            let reel3 = symbols[Math.floor(Math.random() * symbols.length)];
+
+            document.getElementById("reel1").textContent = reel1;
+            document.getElementById("reel2").textContent = reel2;
+            document.getElementById("reel3").textContent = reel3;
+
+            if (reel1 === reel2 && reel2 === reel3) {
+                document.getElementById("result").textContent = "🎉 JACKPOT! 🎉";
+            } else if (reel1 === reel2 || reel2 === reel3 || reel1 === reel3) {
+                document.getElementById("result").textContent = "😊 Nice! You matched two!";
+            } else {
+                document.getElementById("result").textContent = "😢 Try again!";
+            }
+        });
+    </script>
 </body>
 </html>
