@@ -20,12 +20,22 @@
       margin-bottom: 10px;
     }
 
-    .logo {
+    /* ✅ Make image & video responsive */
+    .logo, video {
       width: 100%;
       max-width: 600px;
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-      margin: 20px auto;
+      margin: 15px auto;
+      display: block;
+    }
+
+    /* ✅ On mobile, make them smaller so links appear sooner */
+    @media (max-width: 600px) {
+      .logo, video {
+        max-width: 90%;
+      }
     }
 
     .highlight {
@@ -36,10 +46,10 @@
     }
 
     .button {
-      display: block;
-      width: 200px;
-      margin: 15px auto;
-      padding: 15px;
+      display: inline-block;
+      width: auto;
+      margin: 10px;
+      padding: 12px 18px;
       background: linear-gradient(to right, #ff4e50, #f9d423);
       color: white;
       font-size: 18px;
@@ -52,7 +62,7 @@
       display: inline-block;
       background-color: #111;
       padding: 10px 20px;
-      margin: 20px auto;
+      margin: 15px auto;
       font-size: 20px;
       border-radius: 10px;
       text-shadow: 0 0 10px lime;
@@ -65,31 +75,34 @@
 <body>
   <h1>Batman688</h1>
 
-  <!-- ✅ Image inserted here -->
-    <img src="banner.jpg" alt="Batman Banner" class="logo" />
-<video id="video" width="320" height="240" loop playsinline>
-  <source src="slot.mp4" type="video/mp4" />
-</video>
-<button id="playBtn">Play Video with Sound</button>
+  <!-- ✅ Image -->
+  <img src="banner.jpg" alt="Batman Banner" class="logo" />
+
+  <!-- ✅ Video autoplay muted -->
+  <video id="video" loop playsinline autoplay muted>
+    <source src="slot.mp4" type="video/mp4" />
+  </video>
+  <button id="playBtn">🔊 Play Video with Sound</button>
+
+  <!-- ✅ Buttons right under video -->
+  <div>
+    <a class="button" href="https://t.me/BooBoo1N" target="_blank">📱 Telegram</a>
+    <a class="button" href="viber://chat?number=+959683278672" target="_blank">💬 Viber</a>
+  </div>
+
   <p>အမြန်ဆုံးငွေသွင်း 💸 အမြန်ဆုံး ငွေထုတ်လိုက်ပါ!</p>
 
   <a class="game-link" href="https://m.batman688.net/" target="_blank">🎮 Batman688 Casino</a>
 
-  <a class="button" href="https://t.me/BooBoo1N" target="_blank">📱 Telegram</a>
-  <a class="button" href="viber://chat?number=+959683278672" target="_blank">💬 Viber</a>
   <script>
-  const video = document.getElementById('video');
-  const playBtn = document.getElementById('playBtn');
+    const video = document.getElementById('video');
+    const playBtn = document.getElementById('playBtn');
 
-  playBtn.addEventListener('click', () => {
-    video.muted = false;  // Unmute video
-    video.play();         // Start playing
-    playBtn.style.display = 'none'; // Hide the button after playing
-  });
+    playBtn.addEventListener('click', () => {
+      video.muted = false;
+      video.play();
+      playBtn.style.display = 'none';
+    });
   </script>
 </body>
 </html>
-
-
-
-
