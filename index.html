@@ -66,16 +66,27 @@
   <h1>Batman688</h1>
 
   <!-- ✅ Image inserted here -->
-  <video width="320" height="240" autoplay loop muted playsinline>
+<video id="video" width="320" height="240" loop playsinline>
   <source src="slot.mp4" type="video/mp4" />
 </video>
-
+<button id="playBtn">Play Video with Sound</button>
   <p>အမြန်ဆုံးငွေသွင်း 💸 အမြန်ဆုံး ငွေထုတ်လိုက်ပါ!</p>
 
   <a class="game-link" href="https://m.batman688.net/" target="_blank">🎮 Batman688 Casino</a>
 
   <a class="button" href="https://t.me/BooBoo1N" target="_blank">📱 Telegram</a>
   <a class="button" href="viber://chat?number=+959683278672" target="_blank">💬 Viber</a>
+  <script>
+  const video = document.getElementById('video');
+  const playBtn = document.getElementById('playBtn');
+
+  playBtn.addEventListener('click', () => {
+    video.muted = false;  // Unmute video
+    video.play();         // Start playing
+    playBtn.style.display = 'none'; // Hide the button after playing
+  });
+  </script>
 </body>
 </html>
+
 
